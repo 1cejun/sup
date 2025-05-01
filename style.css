@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: 'Arial', sans-serif;
+    color: #ff4d6d;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+#lock-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.lock {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+#countdown {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#main-content {
+    padding: 20px;
+}
+
+#reveal-button {
+    margin-top: 20px;
+    background-color: #ff4d6d;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#reveal-button:hover {
+    background-color: #ff6680;
+}
+
+/* Texto especial */
+#special-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff4d6d;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+#special-text p {
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+#special-text p.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Galeria de fotos */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.gallery img {
+    width: 250px;
+    height: auto;
+    margin: 10px;
+    border: 3px solid #ff4d6d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 77, 109, 0.3);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.gallery img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Canvas dos corações */
+#hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Animação fade-in */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
